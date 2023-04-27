@@ -1,181 +1,161 @@
-@font-face{
-    font-family: interRegular;
-    src: url(fonts/Inter-Regular.ttf);
-  }
-  @font-face{
-      font-family: interBold;
-      src: url(fonts/Inter-Bold.ttf);
-  }
-  @font-face{
-      font-family: interExtraB;
-      src: url(fonts/Inter-ExtraBold.ttf);
-  }
-  
-  .mainStyle {
-      max-width: 1100px;
-      margin: 0 auto;
+@font-face {
+  font-family: inter;
+  src: url(fonts/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: inter;
+  src: url(fonts/Inter-Bold.ttf);
+  font-weight: 800;
+}
+@font-face {
+  font-family: inter;
+  src: url(fonts/Inter-ExtraBold.ttf);
+  font-weight: 900;
+}
+body {
+  font-family: inter;
+  max-width: 1100px;
+  margin: 0 auto;
+  row-gap: 10px;
+}
 
-  }
-  nav{
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
- 
-  .navigationbar {
-      display: flex;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      justify-content: flex-end;
-  }
-    
-  .navigationbar li a {
-      display: block;
-      color: grey;
-      text-align: center;
-      padding: 16px;
-      text-decoration: none;
-      
-  }
-  .navigationbar li a:hover{
-      color:orange;
-  }
-  .container {
-      display: grid;
-      gap: 10px;
-      grid-template-columns: repeat(3,1fr);
-      grid-template-rows: repeat(2,1fr);
-      max-height: 750px;
-     }
-  .webPhoto {
-    width: 700px;
-    height: 50%;
-  }
-  .info{
-      display:grid;
-      grid-template-columns: 50% 50%;
-  }
-  .title{
-    display: flex;
-    font-family: interExtraB;
-      font-size: 3rem;
-      width: 300px;
-      margin: 0;
-      margin-block-end: auto;
-      margin-block-start: auto;
-  }
-  .paragraph{
-    display: flex;
-    flex-direction: column;
-    font-family: interRegular;
-    color: gray;
-    font-size:medium;
-   
-  }
-  .content button{
-      color: white;
-      background-color: orangered;
-      padding: 16px 32px;
-      letter-spacing: 5px;
-      font-weight: 700;
-      width: 200px;
-      cursor: pointer;
-      border: none;
-      margin-top: 5%;
+nav {
+  margin-bottom: 30px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  }
-  .content button:hover{
-background-color: black;
-  }
-  
-  .blackbox{
-      display: flex;
-      background-color: black;
-      padding: 16px;
-      flex-direction: column;
-      width: 350px;
-      
-  }
-  .blackbox h2{ 
-    display: flex;  
-    padding: 16px;
-    color: orange;
-    font-family: interBold;
-    font-size:250%;
-    margin: 0;
+.navigationbar-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  justify-content: flex-end;
+}
 
-  }
-  .list-contents{
-    margin-right: 10%;
-  }
-  .blackbox h3{
-    cursor: pointer;
-      display: block;
-      padding: 0;
-      color: white;
-      font-family: interBold;
-      
-  }
-  .blackbox h3:hover{
-color: orange;
-  }
-  .blackbox p{
-      display: block;
-      padding: 5px;
-      color: grey;
-      font-family: interRegular;
-      font-size: small;
-      font-weight: bold;
-  
-  }
-  .footer{
-      display: flex;
-      grid-column: 3 span;
-      grid-row: 1 span;
-      padding-bottom: 10%;
-      margin-top: 5%;
-      flex-wrap: nowrap;
-  }
-  .post{
-      display: flex;
-      height: 100px;
-      width: 356px;
-      justify-content: space-between; 
- }
-  .post-info{
-      margin-left: 1rem;
-      height: 100px;
-  }
-  .post img{
-      width: 100px;
-      height: 120px;
+.navigationbar-list li a {
+  display: flex;
+  color: grey;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+.navigationbar-list li a:hover {
+  color: orange;
+}
 
-  }
-  
-  .number{
-    font-family: interBold;
-      color: whitesmoke;
-      font-size: 28px;
-      margin: 0;
-  }
-  .post-title{
-    margin: 10px 0 0 0;
-    cursor: pointer;
-    color: black;
-    font-family: interBold;
+.webPhoto {
+  width: 700px;
+  height: 50%;
+}
+.landing-section {
+  display: flex;
+  gap: 30px;
+}
+.landing-section--title {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.landing-section--title h1 {
+  font-weight: 900;
+  font-size: 3rem;
+  width: 300px;
+  margin: 0;
+}
+.landing-section--title p {
+  color: gray;
+  font-size: medium;
+  width: 300px;
+}
+.landing-section--title button {
+  color: white;
+  background-color: orangered;
+  padding: 16px 32px;
+  letter-spacing: 5px;
+  font-weight: 700;
+  width: 200px;
+  cursor: pointer;
+  border: none;
+  margin-top: 15px;
+}
 
-  }
-  .post-title:hover{
-    color: orange;
-  }
-  .post-content{
-    font-family: interRegular;
-    margin: 10px 0 0 0;
-    font-size: 15px;
-    color:grey;
+.landing-section--title button:hover {
+  background-color: black;
+}
 
-  }
-  
+.new-posts {
+  display: flex;
+  background-color: black;
+  padding: 16px;
+  flex-direction: column;
+  width: 350px;
+}
+.new-posts h2 {
+  display: flex;
+  color: orange;
+  font-size: 40px;
+  font-weight: 800;
+  margin: 16px;
+}
+.new-posts ul {
+  margin-right: 34px;
+}
+
+.new-posts h3 {
+  cursor: pointer;
+  padding: 0;
+  color: white;
+  font-weight: 800;
+}
+.new-posts h3:hover {
+  color: orange;
+}
+.new-posts p {
+  padding: 5px;
+  color: grey;
+  font-size: small;
+}
+.posts-section {
+  display: flex;
+  padding-bottom: 10%;
+  margin-top: 5%;
+}
+.post {
+  display: flex;
+  height: 100px;
+  width: 356px;
+  justify-content: space-between;
+}
+.post-info {
+  margin-left: 1rem;
+  height: 100px;
+}
+.post img {
+  width: 100px;
+  height: 120px;
+}
+
+.post-number {
+  font-weight: 800;
+  color: whitesmoke;
+  font-size: 28px;
+  margin: 0;
+}
+.post-title {
+  margin: 10px 0 0 0;
+  cursor: pointer;
+  color: black;
+  font-weight: 800;
+}
+.post-title:hover {
+  color: orange;
+}
+.post-content {
+  margin: 10px 0 0 0;
+  font-size: 15px;
+  color: grey;
+}
